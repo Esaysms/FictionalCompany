@@ -11,13 +11,13 @@ used 4 classes
 3. UserContext.cs
 4. Users
 
-# Users.cs ia a main user object. and i have used different classes for adding and updating the user details. 
+ Users.cs ia a main user object. and i have used different classes for adding and updating the user details. 
 
-# Used Developer Contoller for the curd operations.
+ Used Developer Contoller for the curd operations.
 
-# UserContext.cs class is a class to connect dbContext.
+ UserContext.cs class is a class to connect dbContext.
 
-## Deploment
+ # Deploment
 
 I have used my personal server to demonistrate the API. 
 
