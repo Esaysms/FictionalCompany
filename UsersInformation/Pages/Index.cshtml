@@ -1,0 +1,104 @@
+﻿@page
+@using FictionalCompany;
+@using FictionalCompany.Models;
+
+@model Users
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+
+<script src="~/JavaScript.js"></script>
+<link href="~/CSS/site.css" rel="stylesheet" />
+@*<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-1.13.6/b-2.4.2/fc-4.3.0/sb-1.5.0/sp-2.2.0/sl-1.7.0/sr-1.3.0/datatables.min.css" rel="stylesheet">*@
+<html>
+<body>
+   
+    <h1>Sample Test</h1>
+    <div class="row">
+        @Html.BeginForm("Index", "Test", FormMethod.Post)
+        {
+        <div class="form-group">
+            <label for="no1">Username</label>
+            <input type="text" class="form-control" id="no1" name="Maths1" value="@Model.Username" />
+        </div>
+        <div>
+            <label for="no1">E-Mail</label>
+            <input type="text" class="form-control" id="no1" name="Maths2" value="@Model.Mail" />
+        </div>
+        <div>
+            <label for="no1">Phone</label>
+            <input type="text" class="form-control" id="no1" name="Physics" value="@Model.Phonenumber" />
+        </div>
+        <div>
+            <label for="no1">SkillSet</label>
+            <input type="text" class="form-control" id="no1" name="Chemstry" value="@Model.SkillSets" />
+        </div>
+        <div>
+            <label for="no1">Hobby</label>
+            <input type="text" class="form-control" id="no1" name="Computers" value="@Model.Hobby" />
+        </div>
+      
+        
+        <div class="button">
+            <input type="submit" value="Sum" class="btn btn-primary" name="b1" />
+            <input type="submit" value="Save" class="btn btn-primary" name="b1" />
+        </div>
+        <div class="modal-body">
+
+            <table id="myTable" class="table table-bordered table-hover table-sm">
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Mail</th>
+                    <th>Phone</th>
+                    <th>Skills</th>
+                    <th>Hobby</th>
+                   
+                    <th>DELETE</th>
+                    <th>EDIT</th>
+                </tr>
+                @foreach (var item in TempData["ie"] as List<Users>)
+                {
+                    <tr style="font-size: 15px;">
+                        <td>@item.Username</td>
+                        <td>@item.Mail</td>
+                        <td>@item.Phonenumber</td>
+                        <td>@item.SkillSets</td>
+                        <td>@item.Hobby</td>
+                      
+                        <td>@Html.ActionLink("Delete", "Delete", new { id = item.ID })</td>
+                        <td>@Html.ActionLink("Edit", "Edit", new { id = item.ID, item.Username, item.Mail, item.Phonenumber, item.SkillSets, item.Hobby })</td>
+
+                    </tr>
+                }
+            </table>
+        </div>
+
+
+    </div>
+
+    <div>
+        <form id="sumForm">
+            <label for="k">Enter k:</label>
+            <input type="text" id="k" name="k" value=""><br><br>
+
+            <label for="n">Enter n:</label>
+            <input type="text" id="n" name="n" value=""><br><br>
+
+            <button type="button" class="=btn btn-danger" onclick="calculateSum()">=</button><br>
+
+            <div id="result"></div>
+        </form>
+
+    </div>
+
+</body>
+</html>
