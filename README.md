@@ -30,4 +30,4 @@ writing code is much easier then deploment
 
 # Freelance user interface.
 
-for now just ignore this. i have done something and not completed becoause lack of time since in my office there is deploment in this month so working extra hours. but i can do it if i have a time. also mentioned in the test this is an option. so i dont think this can be a nagative impact on me.
+for now just ignore this. i have done something and not completed becoause lack of time since in my office there is deploment in this month so working extra hours. but i can do it if i have a time. also mentioned in the test this is an option. so i dont think so this can be a nagative impact for interview process.
